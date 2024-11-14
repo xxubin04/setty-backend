@@ -4,6 +4,8 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
@@ -13,9 +15,7 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/setty" />
-
         <option name="gradleJvm" value="#JAVA_HOME" />
-          1b401b6 (Add: 회원가입 서비스, 레포지토리 구현)
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
