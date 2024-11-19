@@ -1,5 +1,7 @@
-package com.example.setty;
+package com.example.setty.service;
 
+import com.example.setty.entity.Member;
+import com.example.setty.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

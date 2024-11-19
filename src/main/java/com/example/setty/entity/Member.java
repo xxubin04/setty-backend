@@ -1,4 +1,4 @@
-package com.example.setty;
+package com.example.setty.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,5 +1,6 @@
-package com.example.setty;
+package com.example.setty.repository;
 
+import com.example.setty.entity.Member;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import lombok.RequiredArgsConstructor;
