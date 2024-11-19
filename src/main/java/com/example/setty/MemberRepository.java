@@ -22,7 +22,7 @@ public class MemberRepository {
     }
 
 
-    public Optional<Member> findByemail(String email) {
+    public Optional<Member> findByEmail(String email) {
         //특정 타입(Member)을 반환하는 쿼리 생성
         //em.createQuery()-> JPQL 쿼리 작성
         // "select ~" -> JPQL 쿼리. Member 엔티티 대상으로 em
