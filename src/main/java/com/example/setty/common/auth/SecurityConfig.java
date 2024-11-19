@@ -11,7 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration  // Spring IoC 컨테이너에게 해당 클래스가 Bean 구성 클래스임을 알려주는 annotation
 @EnableWebSecurity  // Spring Security 활성화하여 보안 설정 적용
-public class SecurityConfig extends WebSecurityConfiguration {
+public class SecurityConfig {
     // WebSecurityConfiguration: Spring Security에서 HTTP 요청에 대한 기본 보안 구성 설정하는 클래스
 
     // @Bean: 메서드의 반환값을 IoC 컨테이너에 Bean으로 등록하기 위해 사용하는 annotation
