@@ -12,21 +12,28 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "회원 API")
+import java.util.Map;
+
+//@Tag(name = "회원 API")
 @RestController
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class MemberApiController {
     private final MemberService memberService;
-
     private final ModelMapper modelMapper;
 
-    @Operation(summary = "회원 신규 추가(가입)")
-    @PostMapping("/api/v1/member")
-    public ResponseEntity<Long> addMember(@Valid @RequestBody MemberRequestDto member) {
-        Member entity = modelMapper.map(member, Member.class);
-        Long id = memberService.join(entity);
-        return ResponseEntity.status(HttpStatus.OK).body(id);
+    @Operation(summary = "회원가입 API")
+    @PostMapping("/register")
+    public ResponseEntity<?> addMember(@Valid @RequestBody MemberRequestDto member) {
+        try {
+            Member entity = modelMapper.map(member, Member.class);
+            Long id = memberService.join(entity);
+            return ResponseEntity.ok(Map.of("message", "Registration successful", "memberId", id));
+        } catch (IllegalArgumentException ex) {
+            return ResponseEntity.badRequest().body(Map.of("message", ex.getMessage()));
+        }
     }
 }
