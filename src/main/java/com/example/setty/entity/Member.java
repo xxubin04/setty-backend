@@ -20,9 +20,10 @@ public class Member {
 
     private String email;
     private String password;
+    private String nickname;
 
     // 비밀번호를 암호화하는 메서드
-    public void encodePassword(String encodedPassword) {
-        this.password = encodedPassword; // 암호화된 비밀번호 저장
-    }
+    //public void encodePassword(String encodedPassword) {
+    //    this.password = encodedPassword; // 암호화된 비밀번호 저장
+    //}
 }

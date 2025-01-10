@@ -31,7 +31,7 @@ public class MemberServiceImple implements MemberService {
             throw new IllegalArgumentException("This member email is already exist. "+member.getEmail()); //표준 예외: 잘못된 인자가 넘어갔을 때 발생
         }
 
-        member.encodePassword(encoder.encode(member.getPassword())); // 암호를 암호화하는 코드
+        //member.encodePassword(encoder.encode(member.getPassword())); // 암호를 암호화하는 코드
 
         memberRepository.create(member); //DB에 회원 정보 저장.
         return member.getMemberId(); //회원가입 완료되면 회원 ID 반환.
